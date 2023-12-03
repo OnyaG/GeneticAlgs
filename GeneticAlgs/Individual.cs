@@ -7,7 +7,7 @@ using static System.Net.Mime.MediaTypeNames;
 
 namespace GeneticAlgs
 {
-    internal class Individual
+    public class Individual
     {
         private bool[] _cromosome;
         private double? fitnessFunc;
@@ -15,6 +15,11 @@ namespace GeneticAlgs
 
         Individual(int length)
         {
+            _cromosome = GenerateIndividual(length);
+        }
+        Individual(bool[] cromosome)
+        {
+            _cromosome = cromosome;
         }
 
         private bool[] GenerateIndividual(int length)
@@ -24,7 +29,7 @@ namespace GeneticAlgs
             {
                 cromosome[i] = RandomBool.GetRandomBool();
             }
-            return 
+            return cromosome;
         }
     }
 }
