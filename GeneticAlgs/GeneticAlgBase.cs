@@ -1,6 +1,6 @@
 ﻿namespace GeneticAlgs
 {
-    public class Class1
+    public class GeneticAlgBase
     {
 
     }
