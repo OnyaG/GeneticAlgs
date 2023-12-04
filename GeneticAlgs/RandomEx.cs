@@ -28,5 +28,17 @@ namespace GeneticAlgs
         {
             return _randomBool.NextBoolean();
         }
+
+    }
+
+    public static class RandomBoolByProbability
+    {
+        static Random gen = new Random();
+        
+        public static bool GetRandomBool(double probabilityOfTrue)
+        {
+            double rand = gen.NextDouble();
+            return rand < probabilityOfTrue;
+        }
     }
 }
